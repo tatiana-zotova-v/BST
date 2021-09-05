@@ -1,0 +1,12 @@
+bst: bst_func.c bst_interface.c bst_main.c 
+
+	gcc bst_func.c bst_interface.c bst_main.c -o bst
+
+bst_func.o: bst_func.c tree.h
+	gcc -c bst_func.c -o bst_func.o
+
+bst_interface.o: bst_interface.c tree.h
+	gcc -c bst_interface.c -o bst_interface.o
+
+bst_main.o: bst_main.c tree.h
+	gcc -c bst_main.c -o bst_main.o
